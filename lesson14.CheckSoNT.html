@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function testSNT(number) {
+
+        let check =true;
+        for (let i =2; i < number; i++) {
+            if (number%i==0){
+                check=false;
+                break;
+            }
+        }
+        return check;
+    }
+        let daysoNT = "";
+        for (let i = 2; i < 10000; i++) {
+            if (testSNT(i)){
+                daysoNT += i + ' ';
+            }
+        }
+    document.write(daysoNT);
+</script>
+</body>
+</html>
